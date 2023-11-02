@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOkes - Jokes that make you feel happy</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="DOkes" id="logo">
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">About Dark Jokes</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="joke-generator">
+        <div class="text-area">
+            <h1>Get Your Joke</h1>
+            <% if(locals.setup && locals.delivery) {%>
+                <h2 id="jokeText">
+                    <%= setup %>
+                        <br>
+                        <span>
+                            <%= delivery %>
+                        </span>
+                </h2>
+                <% } %>
+        </div>
+        <button type="submit" class="btn" data-clipboard-target="#jokeText">Copy Joke</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script> var clipboard = new ClipboardJS('.btn');
+
+        clipboard.on('success', function (e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+        });
+
+        clipboard.on('error', function (e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+        });</script>
+</body>
+
+</html>
