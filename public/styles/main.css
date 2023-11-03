@@ -70,6 +70,30 @@ header {
     color: #000;
 }
 
+.web-btn {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    padding: 10px 20px 10px 20px;
+    border: solid #fff 2px;
+    background-color: transparent;
+    margin-top: 35px;
+    transition: 0.2s all ease;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.web-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 span {
     font-size: 20px;
 }

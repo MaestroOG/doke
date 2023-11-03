@@ -13,7 +13,7 @@
         <img src="images/logo.png" alt="DOkes" id="logo">
         <nav id="navbar">
             <ul>
-                <li><a href="#">About Dark Jokes</a></li>
+                <li><a href="#">About Dokes</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
@@ -32,7 +32,12 @@
                 </h2>
                 <% } %>
         </div>
-        <button type="submit" class="btn" data-clipboard-target="#jokeText">Copy Joke</button>
+        <div class="btn-area">
+            <button type="submit" class="btn web-btn" data-clipboard-target="#jokeText">Copy Joke</button>
+            <form method="post">
+                <button type="submit" class="btn web-btn" formaction="/new">Get New Joke</button>
+            </form>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     <script> var clipboard = new ClipboardJS('.btn');

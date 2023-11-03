@@ -16,6 +16,16 @@ app.get("/", async (req, res) => {
     }
 })
 
+app.post("/new", async (req, res) => {
+    try {
+        const result = await axios.get("https://v2.jokeapi.dev/joke/Dark?type=twopart");
+        res.render("index.ejs", { setup: result.data.setup, delivery: result.data.delivery });
+    } catch (error) {
+        console.error();
+        res.status(500).send('API request failed');
+    }
+})
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}.`);
 })
